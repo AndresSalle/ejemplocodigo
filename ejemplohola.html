@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>20 Ejemplos de JavaScript para Diseño Web</title>
+  <style>
+    body {background-color: #87CEEB;
+    font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+transition: background-color 0.3s, color 0.3s;}
+.card {
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow:  0 4px 8 px rgba(0,0,0,0.2);
+  background-color: white;
+  transition:  background-color 0.3s;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor:pointer;
+  font-size: 30px;
+  margin: 0 10px;
+}
+
+button:hover{
+  transform: scale(1.2);
+}
+
+
+  </style>
+</head>
+<body>
+
+<script>
+
+function cambiarVista(imagen, colorFondo, colorTexto, colorTarjeta){
+  document.getElementById("imagen").src = imagen;
+  document.body.style.backgroundColor = colorFondo;
+  document.body.style.color = colorTexto;
+  document.querySelector('.card').style.backgroundColor = colorTarjeta;
+
+}
+
+</script>
+ 
+
+<div class="card">
+  <img id="imagen" src="dia.png" alt="vista dia" width="100%">
+  <h3>Bienvenido</h3>
+  <p>Selecciona dia o noche</p>
+  <div class="buttons">
+    <button onclick="cambiarVista('dia.png','#87CEEB', '#333333', '#FFFFFF')" title="dia">☀️</button>
+    <button onclick="cambiarVista('noche.jpg','#2C3E50', '#ecf0f1', '#34495e')" title="noche">🌕</button>
+  </div>
+
+
+
+</div>
+</body>
+</html>
